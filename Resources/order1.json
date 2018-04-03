@@ -1,0 +1,13 @@
+{
+  "id": "1",
+  "customer_id": "1",
+  "items": [
+    {
+      "product_id": "B102",
+      "quantity": "10",
+      "unit_price": "4.99",
+      "total": "49.90"
+    }
+  ],
+  "total": "4900.90"
+}
