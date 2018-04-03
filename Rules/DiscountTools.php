@@ -32,9 +32,9 @@ class DiscountTools extends DiscountRule
             $category = Product::findProductCategory($line->product_id);
             if ($category === self::DISCOUNT_CATEGORY_TOOLS) {
                 $lowestPrice = (isset($lowestPrice) && $lowestPrice < $line->unit_price) ? $lowestPrice : $line->unit_price;
-                $discount = round($lowestPrice * 2 / 10, 2);
             }
         }
+        $discount = round($lowestPrice * 2 / 10, 2);
         $discountInfo = new DiscountInfo();
         $discountInfo->setReasonForDiscount("If you buy two or more products of category 'Tools' (id 1), you get a 20% discount on the cheapest product");
         $discountInfo->setReceivedDiscount($discount);
